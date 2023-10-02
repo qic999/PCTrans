@@ -1,0 +1,54 @@
+# All other configurations are set by default. If you want to add new config options,
+# please modify ../connectomics/config/defaults.py
+MODEL:
+  ARCHITECTURE: maskformer
+  BLOCK_TYPE:  residual # residual_se
+  INPUT_SIZE: [448, 448]
+  OUTPUT_SIZE: [1, 448, 448]
+  IN_PLANES: 3
+  OUT_PLANES: 1
+  TARGET_OPT: ["8"]
+  LABEL_EROSION: 1
+
+
+  BACKBONE:
+    FREEZE_AT: 0
+    NAME: "build_resnet_backbone"
+  WEIGHTS: "models/R-50.pkl"
+  PIXEL_MEAN: [0,0,0]
+  PIXEL_STD: [255.0,255.0,255.0]
+  RESNETS:
+    DEPTH: 50
+    STEM_TYPE: "basic"  # not used
+    STEM_OUT_CHANNELS: 64
+    STRIDE_IN_1X1: False
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    # NORM: "SyncBN"
+    RES5_MULTI_GRID: [1, 1, 1]  # not used
+
+AUGMENTOR:
+  SMOOTH: False
+  ROTATE:
+    ROT90: False
+    P: 0.5
+DATASET:
+  DO_2D: True
+  DATA_TYPE: CVPPP
+  IMAGE_NAME: AC4_train_volume.tif
+  LABEL_NAME: AC4_train_2d_gt.tif # AC4_train_gt.tif
+  VAL_IMAGE_NAME: None
+  VAL_LABEL_NAME: None
+  INPUT_PATH: /data/qic99/em_data/A1_new/ # or your own dataset path
+MONITOR:
+  ITERATION_NUM: [200, 1000]
+INFERENCE:
+  INPUT_SIZE: [1, 160, 160]
+  OUTPUT_SIZE: [1, 160, 160]
+  OUTPUT_ACT: ["sigmoid"] # ["sigmoid"]
+  IMAGE_NAME: /braindat/lab/qic/data/PDAM/EM_DATA/AC3_AC4/AC3_inputs.h5 # or path to your test images
+  OUTPUT_NAME: result.h5
+  PAD_SIZE: [0, 48, 48]
+  AUG_MODE: None
+  AUG_NUM: None
+  STRIDE: [0, 80, 80]
+  SAMPLES_PER_BATCH: 4
