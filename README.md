@@ -8,7 +8,7 @@ PCTrans is the first one-stage position-guided transformer with query contrast f
 This repository provides the official implementation of PCTrans.
 
 <b>PCTrans: Position-Guided Transformer with Query Contrast for Biological Instance Segmentation</b> <br/>
-[Qi Chen](https://scholar.google.com/citations?user=4Q5gs2MAAAAJ&hl=en&scioq=Qi+Chen+ustc)<sup>1</sup>, [Wei Huang](https://scholar.google.com/citations?user=C4zmoy4AAAAJ&hl=en)<sup>1</sup>, [Xiaoyu Liu](https://scholar.google.com/citations?user=0qyOmX8AAAAJ&hl=en&oi=ao)<sup>1</sup>, [Jiacheng Li](http://home.ustc.edu.cn/~jclee/)<sup>1</sup>, [Zhiwei Xiong](http://staff.ustc.edu.cn/~zwxiong/)<sup>1</sup>, <br/>
+[Qi Chen](https://scholar.google.com/citations?user=4Q5gs2MAAAAJ&hl=en&scioq=Qi+Chen+ustc)<sup>1</sup>, [Wei Huang](https://scholar.google.com/citations?user=C4zmoy4AAAAJ&hl=en)<sup>1</sup>, [Xiaoyu Liu](https://scholar.google.com/citations?user=0qyOmX8AAAAJ&hl=en&oi=ao)<sup>1</sup>, [Jiacheng Li](http://home.ustc.edu.cn/~jclee/)<sup>1</sup>, [Zhiwei Xiong](http://staff.ustc.edu.cn/~zwxiong/)<sup>1</sup> <br/>
 <sup>1 </sup>University of Science and Technology of China<br/>
 paper | [code](https://github.com/qic999/PCTrans) | slides | poster 
 <!-- [paper](https://link.springer.com/content/pdf/10.1007/978-3-031-16440-8_4.pdf) -->
